@@ -24,10 +24,14 @@ engine = create_engine(connection)
 def loading():
       """view function to load data to SQL Server tables"""
       
+      path = 'C:\\Users\\COREBI\\Desktop\\archivos\\'
+      os.chdir(path)
+      
       try:
-        if (request.files not in 'jobs') or (request.files not in 'hired')\
-            or (request.files not in 'departments'):
-            pass
+        files_to_upload = ['jobs.csv','departments.csv','hired_employees.csv']
+        for x in files_to_upload:
+            if (x not in request.files):
+                return 'Be careful, {x} is not available at the moment'
     
         #read and write dfs
         jobs = pd.read_csv(request.files['jobs.csv'])
@@ -44,7 +48,4 @@ def loading():
         return f'error present: {e}'
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    path = 'C:\\Users\\COREBI\\Desktop\\archivos\\'
-    os.chdir(path)
     app.run(debug=True)
