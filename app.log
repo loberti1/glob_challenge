@@ -1,0 +1,27 @@
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [11/Mar/2024 23:44:10] "POST / HTTP/1.1" 200 -
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [11/Mar/2024 23:44:52] "POST / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\COREBI\\Desktop\\glob_challenge\\app_api_glob.py', reloading
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [11/Mar/2024 23:52:12] "POST / HTTP/1.1" 200 -
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [12/Mar/2024 05:08:29] "POST / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\COREBI\\Desktop\\glob_challenge\\app_api_glob.py', reloading
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [12/Mar/2024 05:09:29] "POST / HTTP/1.1" 200 -
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [12/Mar/2024 05:20:00] "POST / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\COREBI\\Desktop\\glob_challenge\\app_api_glob.py', reloading
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [12/Mar/2024 05:21:48] "POST / HTTP/1.1" 200 -
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [12/Mar/2024 05:44:11] "POST / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\COREBI\\Desktop\\glob_challenge\\app_api_glob.py', reloading
+INFO:root:Received files: ['jobs.csv']
+INFO:werkzeug:127.0.0.1 - - [12/Mar/2024 05:44:47] "POST / HTTP/1.1" 200 -
+INFO:root:Received files: ['jobs.csv', 'departments.csv', 'hired_employees.csv']
+INFO:werkzeug:127.0.0.1 - - [12/Mar/2024 05:50:44] "POST / HTTP/1.1" 200 -
+INFO:root:Received files: ['jobs.csv', 'departments.csv', 'hired_employees.csv']
+INFO:werkzeug:127.0.0.1 - - [12/Mar/2024 05:53:02] "POST / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\COREBI\\Desktop\\glob_challenge\\app_api_glob.py', reloading
