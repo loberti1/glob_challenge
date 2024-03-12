@@ -9,4 +9,4 @@ You can send requests using this command:
 curl -X POST -F "jobs.csv=@C:\Users\COREBI\Desktop\archivos\jobs.csv" -F "departments.csv=@C:\Users\COREBI\Desktop\archivos\departments.csv" -F "hired_employees.csv=@C:\Users\COREBI\Desktop\archivos\hired_employees.csv" http://127.0.0.1:5000/
 
 # 2
-Inside SQL folder, all queries needed can be accesed. DDL and views were defined for this section, pretty straightforward. I will add an endpoint for this queries after I verified the information requiremets are met.
+Inside SQL folder, all queries needed can be accesed. DDL and DML were defined for this section, pretty straightforward. I will add an endpoint for this queries after I verified the information requiremets are met.
