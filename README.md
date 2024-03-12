@@ -9,5 +9,5 @@ You can send requests using this command:
 curl -X POST -F "jobs.csv=@C:\Users\COREBI\Desktop\archivos\jobs.csv" -F "departments.csv=@C:\Users\COREBI\Desktop\archivos\departments.csv" -F "hired_employees.csv=@C:\Users\COREBI\Desktop\archivos\hired_employees.csv" http://127.0.0.1:5000/load
 
 # 2
-Inside SQL folder, all queries needed can be accesed. DDL and DML were defined for this section, pretty straightforward. I added an endpoint for this queries in the same app_api_glob.py, this time as I'm getting information GET method will be used.
-I will add some visualizations in PowerBI for this queries as bonus track
+Inside SQL folder, all queries needed can be accesed. DDL and DML were defined for this section, pretty straightforward. I added an endpoint for this queries in app_api_glob.py, this time as I'm getting information, 'GET' method will be used.
+I added some visualizations in PowerBI for this queries as a bonus track.
