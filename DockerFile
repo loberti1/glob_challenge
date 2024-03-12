@@ -12,5 +12,5 @@ COPY SQL /app/SQL
 RUN pip install --no-cache-dir -r requirements.txt
 
 #flask port and run command defined
-EXPOSE 5000
+EXPOSE 80
 CMD ["python", "app_api_glob.py"]
