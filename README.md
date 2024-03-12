@@ -11,3 +11,6 @@ curl -X POST -F "jobs.csv=@C:\Users\COREBI\Desktop\archivos\jobs.csv" -F "depart
 # 2
 Inside SQL folder, all queries needed can be accesed. DDL and DML were defined for this section, pretty straightforward. I added an endpoint for this queries in app_api_glob.py, this time as I'm getting information, 'GET' method will be used.
 I added some visualizations in PowerBI for this queries as a bonus track.
+
+# 3
+I do not have enough time for the bonus track but my intent, at the very least, is to dockerize this flask app in an AWS EC2 instace
