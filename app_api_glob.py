@@ -21,24 +21,26 @@ engine = create_engine(connection)
 @app.route('/',methods = ['POST'])
 
 def loading():
+      
       """view function to load data to SQL Server tables"""
 
       path = 'C:\\Users\\COREBI\\Desktop\\archivos\\'
       os.chdir(path)
 
       try:
-        #read and write dfs, specify columns in the process
-        df_jobs = pd.read_csv(request.files['jobs.csv'], header = None)
-        df_departments = pd.read_csv(request.files['departments.csv'], header = None)
-        df_hired_employees = pd.read_csv(request.files['hired_employees.csv'], header = None)
+        #loop to insert batches up to 1000 rows
+        for file, max_rows in zip(['jobs.csv', 'departments.csv', 'hired_employees.csv'], [1000, 1000, 1000]):
+            df = pd.read_csv(file, header = None, chunksize = max_rows)
+            for data in df:
+                if file == 'jobs.csv':
+                    data.columns = ['id_jobs','ds_jobs']
+                elif file == 'departments.csv':
+                    data.columns = ['id_departments','ds_departments']
+                elif file == 'hired_employees.csv':
+                    data.columns = ['id_custom_hired_employee','ds_hired_employee','id_datetime','id_departments','id_jobs']
+                else: None
 
-        df_jobs.columns = ['id_jobs','ds_jobs']
-        df_departments.columns = ['id_departments','ds_departments']
-        df_hired_employees.columns = ['id_custom_hired_employee','ds_hired_employee','id_datetime','id_departments','id_jobs']
-        
-        df_jobs.to_sql('jobs', engine, if_exists='append', index=False)
-        df_departments.to_sql('departments', engine, if_exists='append', index=False)
-        df_hired_employees.to_sql('hired_employees', engine, if_exists='append', index=False)
+                data.to_sql(file.split('.')[0], engine, if_exists='append', index=False)
 
         return 'data was loaded successfully'
     
@@ -50,3 +52,7 @@ if __name__ == '__main__':
 
 #command to send requests:
 #curl -X POST -F "jobs.csv=@C:\Users\COREBI\Desktop\archivos\jobs.csv" -F "departments.csv=@C:\Users\COREBI\Desktop\archivos\departments.csv" -F "hired_employees.csv=@C:\Users\COREBI\Desktop\archivos\hired_employees.csv" http://127.0.0.1:5000/
+    
+
+
+
