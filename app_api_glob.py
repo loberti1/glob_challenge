@@ -29,9 +29,10 @@ def loading():
       os.chdir(path)
 
       try:
+
         #loop to insert batches up to 1000 rows
-        for file, max_rows in zip(['jobs.csv', 'departments.csv', 'hired_employees.csv'], [1000, 1000, 1000]):
-            df = pd.read_csv(file, header = None, chunksize = max_rows)
+        for file in ['jobs.csv', 'departments.csv', 'hired_employees.csv']:
+            df = pd.read_csv(file, header = None, chunksize = 1000)
             for data in df:
                 if file == 'jobs.csv':
                     data.columns = ['id_jobs','ds_jobs']
