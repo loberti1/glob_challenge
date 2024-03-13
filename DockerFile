@@ -14,3 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 #flask port and run command defined
 EXPOSE 80
 CMD ["python", "app_api_glob.py"]
+#end
